@@ -44,6 +44,10 @@ pub enum ReferrerPolicy {
     OriginWhenCrossOrigin,
     /// `unsafe-url`
     UnsafeUrl,
+    /// `strict-origin`
+    StrictOrigin,
+    ///`strict-origin-when-cross-origin`
+    StrictOriginWhenCrossOrigin,
 }
 
 impl Header for ReferrerPolicy {
