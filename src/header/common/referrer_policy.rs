@@ -69,6 +69,8 @@ impl Header for ReferrerPolicy {
                 "same-origin" => return Ok(SameOrigin),
                 "origin" => return Ok(Origin),
                 "origin-when-cross-origin" => return Ok(OriginWhenCrossOrigin),
+                "strict-origin" => Ok(StrictOrigin),
+                "strict-origin-when-cross-origin" => Ok(StrictOriginWhenCrossOrigin),
                 "unsafe-url" | "always" => return Ok(UnsafeUrl),
                 _ => continue,
             }
@@ -85,6 +87,8 @@ impl Header for ReferrerPolicy {
             SameOrigin => "same-origin",
             Origin => "origin",
             OriginWhenCrossOrigin => "origin-when-cross-origin",
+            StrictOrigin => "stict-origin",
+            StrictOriginWhenCrossOrigin => "strict-origin-when-cross-origin",
             UnsafeUrl => "unsafe-url",
         })
     }
